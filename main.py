@@ -36,7 +36,7 @@ def main():
 
         messages.append({"role": "assistant", "content": response_content})
 
-        print(f"[bold white]> [/bold white][green]{response_content}[green]")
+        print(f"[bold orange]> [/bold orange][green]{response_content}[green]")
 
 
 def __prompt() -> str:
@@ -45,7 +45,7 @@ def __prompt() -> str:
     if prompt == "exit":
         exit = typer.confirm("¿Estás seguro de salir?")
         if exit:
-            print("Hasta Luego")
+            print("[bold purple]Hasta Luego[/bold purple]")
             raise typer.Abort()
         
         return __prompt()
